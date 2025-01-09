@@ -1,2 +1,11 @@
-{ "tasks": [ { "name": "Europe travel",
-  "url": "https://www.airbnb.com/s/Europe/homes?tab_id=home_tab&refinement_path s%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_da te=2024-12-01&monthly_length=3&monthly_end_date=2025-03-01&price_filte r_input_type=0&channel=EXPLORE&place_id=ChIJhdqtz4aI7UYRefD8s-aZ73I&da te_picker_type=calendar&source=structured_search_input_header&search_t ype=filter_change", "headers": { "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0" } } ] }
+{
+  "tasks": [
+    {
+      "name": "Europe travel",
+      "url": "https://www.airbnb.com/s/Europe/homes?tab_id=home_tab&refinement_path s%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_da te=2024-12-01&monthly_length=3&monthly_end_date=2025-03-01&price_filte r_input_type=0&channel=EXPLORE&place_id=ChIJhdqtz4aI7UYRefD8s-aZ73I&da te_picker_type=calendar&source=structured_search_input_header&search_t ype=filter_change",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0"
+      }
+    }
+  ]
+}

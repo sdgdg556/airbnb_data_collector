@@ -3,12 +3,11 @@ package main
 import (
 	"data_collector/biz"
 	"data_collector/config"
+	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"os"
 	"strconv"
 	"strings"
-	//
-	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
@@ -16,7 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("load config err: %+v, config_path: ../config/config.yaml", err)
 	}
-	if len(os.Args) < 6 {
+	if len(os.Args) < 5 {
 		log.Fatal("Usage: airbnb-cli start [consumer|producer] [--workers=N] --queue=<your-queue-server> --data tasks.json")
 	}
 	for i := 0; i < len(os.Args); i++ {
