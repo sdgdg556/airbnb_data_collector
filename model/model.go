@@ -7,11 +7,15 @@ type Task struct {
 	Headers map[string]string `json:"headers"`
 }
 
-// BookingInfo 表示预订信息，根据实际情况修改
+// BookingInfo
+
 type BookingInfo struct {
-	ID          int    `json:"id"`
-	TaskName    string `json:"task_name"`
-	Property    string `json:"property"`
-	Price       string `json:"price"`
-	Description string `json:"description"`
+	ID               int64   `json:"id"`
+	HotelName        string  `json:"hotel_name"`
+	Star             float64 `json:"star"`
+	Price            float64 `json:"price"`
+	PriceBeforeTaxes float64 `json:"price_before_taxes"`
+	CheckInDate      string  `json:"check_in_date"`
+	CheckOutDate     string  `json:"check_out_date"`
+	Guests           int64   `json:"guests"`
 }

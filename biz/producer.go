@@ -43,7 +43,7 @@ func (p *Producer) Produce(dataFile string) {
 		}
 		// 保证task唯一性
 		if _, err := p.redis.SAdd("airbnb_task_ids", taskJSON).Result(); err == nil {
-			p.redis.LPush("airbnb_tasks", taskJSON)
+			p.redis.LPush(p.queueName, taskJSON)
 		}
 	}
 }

@@ -1,6 +1,8 @@
 package config
 
 import (
+	yaml "gopkg.in/yaml.v3"
+	"io/ioutil"
 	"os"
 )
 
@@ -23,9 +25,14 @@ func GetConfig(filePath string) (*Config, error) {
 	var config *Config
 
 	// 读取文件内容
-	data, err := os.Open(filePath)
+	file, err := os.Open(filePath)
 	if err != nil {
-		return config, err
+		return nil, err
+	}
+	defer file.Close()
+	data, err := ioutil.ReadAll(file)
+	if err != nil {
+		return nil, err
 	}
 
 	// 解析 YAML 数据
