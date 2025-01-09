@@ -1,0 +1,9 @@
+mysql:
+  host: "localhost:3306"
+  username:
+  password:
+  database: "airbnb"
+
+redis:
+  host: "localhost:6379"
+  password:
